@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EduTrack - Student Study Planner</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="logo">EduTrack</div>
+
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tasks">Tasks</a>
+            <a href="#subjects">Subjects</a>
+        </nav>
+
+        <button id="themeButton" class="theme-button">🌙</button>
+    </header>
+
+
+    <main>
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="hero">
+
+            <div class="hero-content">
+                <p class="label">STUDENT STUDY PLANNER</p>
+
+                <h1>
+                    Study smarter.<br>
+                    Stay consistent.
+                </h1>
+
+                <p class="hero-text">
+                    Plan your study tasks, track your progress,
+                    and stay organized throughout your learning journey.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <p>Total Tasks</p>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Completed</p>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Pending</p>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <p>Progress</p>
+                <h2 id="progressPercent">0%</h2>
+            </div>
+
+        </section>
+
+
+        <!-- Add Task -->
+        <section id="tasks" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">PLAN YOUR DAY</p>
+                    <h2>Study Tasks</h2>
+                </div>
+            </div>
+
+
+            <form id="taskForm" class="task-form">
+
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a study task..."
+                    required
+                >
+
+                <select id="subjectInput">
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="SQL">SQL</option>
+                    <option value="DBMS">DBMS</option>
+                    <option value="React">React</option>
+                    <option value="Aptitude">Aptitude</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <button type="submit">
+                    + Add Task
+                </button>
+
+            </form>
+
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search your tasks..."
+                >
+
+                <select id="filterInput">
+                    <option value="all">All Tasks</option>
+                    <option value="pending">Pending</option>
+                    <option value="completed">Completed</option>
+                </select>
+
+            </div>
+
+
+            <!-- Tasks -->
+            <div id="taskList" class="task-list"></div>
+
+        </section>
+
+
+        <!-- Subjects -->
+        <section id="subjects" class="section">
+
+            <div class="section-title">
+                <div>
+                    <p class="label">YOUR LEARNING</p>
+                    <h2>Subjects</h2>
+                </div>
+            </div>
+
+
+            <div class="subjects">
+
+                <div class="subject-card">
+                    <span>JS</span>
+                    <h3>JavaScript</h3>
+                    <p>Programming & Web Development</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>SQL</span>
+                    <h3>SQL</h3>
+                    <p>Database Queries</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>DB</span>
+                    <h3>DBMS</h3>
+                    <p>Database Concepts</p>
+                </div>
+
+                <div class="subject-card">
+                    <span>AP</span>
+                    <h3>Aptitude</h3>
+                    <p>Placement Preparation</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Study Goal -->
+        <section class="goal-section">
+
+            <div>
+                <p class="label">DAILY GOAL</p>
+                <h2>Keep learning every day.</h2>
+                <p>
+                    Complete your planned tasks and maintain
+                    your study consistency.
+                </p>
+            </div>
+
+            <div class="goal-progress">
+                <div class="circle">
+                    <span id="goalProgress">0%</span>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 EduTrack — Student Study Planner</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
